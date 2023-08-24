@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: sans-serif;
+    max-width: calc(100%)-90px;
+}
+/* styling the guess number title */
+.guess_number{
+    text-align: center;
+    color: #fff;
+    background-color: crimson;
+    padding: 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.parent_container{
+
+    margin: 4rem;
+    height: 8vh;
+    border-radius: 20px;
+}
+
+.welcome_screen{
+    text-align: center;
+    margin: 2rem;
+    text-transform: uppercase;
+    animation: movingText 2s linear infinite;
+}
+.game_function_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    gap: 2rem;
+    box-shadow: 8px 8px 24px 0px rgba(239, 224,224, 1);
+    width: 45vw;
+    height: 40vh;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.button_container{
+    display: flex;
+    gap: 2rem;
+}
+.btn{
+    padding:0.5rem;
+    width: 8rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff
+}
+.reset{
+    background-color: purple;
+}
+
+.confirm{
+    background-color: crimson;
+}
+.guess_input{
+    width: 20rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid crimson;
+}
+
+.guess_input:focus{
+    outline: none;
+}
+
+.score_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.result{
+    font-size: 2rem;
+    background-color: purple;
+    padding: 1.5rem;
+    color: #fff;
+    margin: 1rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+}
+@keyframes movingText {
+    0%{
+        transform: translate(90px);
+    }
+}
+@media only screen and (max-width: 600px) {
+   .game_function_box{
+    width: 55vw;
+    height: 40vh;
+   }
+}
