@@ -18,7 +18,6 @@ body{
     border-top-right-radius: 20px;
 }
 .parent_container{
-
     margin: 4rem;
     height: 8vh;
     border-radius: 20px;
@@ -37,10 +36,16 @@ body{
     padding: 4rem;
     gap: 2rem;
     box-shadow: 8px 8px 24px 0px rgba(239, 224,224, 1);
-    width: 45vw;
-    height: 40vh;
+    width: 35vw;
+    height: 70vh;
     margin: 0 auto;
     border-radius: 10px;
+}
+.number{
+    padding: 1rem;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 5px;
 }
 .button_container{
     display: flex;
@@ -67,7 +72,11 @@ body{
     width: 20rem;
     padding: 0.5rem;
     border: none;
-    border-bottom: 2px solid crimson;
+    border-bottom: 2px solid purple;
+    text-align: center;
+    font-size: 1.5rem;
+    color: crimson;
+    font-weight: 600;
 }
 
 .guess_input:focus{
@@ -89,6 +98,7 @@ body{
     width: 4rem;
     border-radius: 3rem;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 @keyframes movingText {
@@ -98,7 +108,13 @@ body{
 }
 @media only screen and (max-width: 600px) {
    .game_function_box{
-    width: 55vw;
+    width: 60vw;
     height: 40vh;
    }
+}
+@media only screen and (max-width: 768px) {
+    .game_function_box{
+        width: 60vw;
+        height: 40vh;
+       }
 }
