@@ -77,6 +77,7 @@ body{
     font-size: 1.5rem;
     color: crimson;
     font-weight: 600;
+    background-color: transparent;
 }
 
 .guess_input:focus{
@@ -87,6 +88,15 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.next{
+    width: 5rem;
+    position: absolute;
+    bottom: -8rem;
+    left: 50rem;
+    color: white;
+    background-color: blueviolet;
+    padding: 0.5rem;
 }
 .result{
     font-size: 2rem;
@@ -110,6 +120,10 @@ body{
    .game_function_box{
     width: 60vw;
     height: 40vh;
+   }
+   .next{
+    left: 25rem;
+    bottom: -13rem;
    }
 }
 @media only screen and (max-width: 768px) {

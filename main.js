@@ -9,24 +9,36 @@ const displayMessage = function(message){
 const functionBox = document.querySelector(".game_function_box")
 const confirm_one = document.querySelector(".confirm")
 const number = document.querySelector(".number")
+const hint = document.querySelector(".hint")
+const next = document.querySelector(".next")
 
 confirm_one.addEventListener("click", function(){
     const guess = Number(document.querySelector(".guess_input").value)
-    number.textContent = guess
+    number.textContent = "?"
 
     // no number
     if(!guess){
         displayMessage("No Number 🚫")
     }
     // if user win
-    if(guess == secretNumber){
-        displayMessage("Correct Number");
-
+    if(guess === secretNumber){
+        displayMessage("Correct Number 🏆");
+         number.textContent = guess
+         hint.textContent = " "
 
     functionBox.style.backgroundColor ="green"
-    }else(
-        displayMessage("wrong Number")
-    )
+    functionBox.style.transition = "2s ease-in"
+    }else{
+        displayMessage("Wrong Number 👎❌");
+        functionBox.style.backgroundColor ="red"
+        functionBox.style.transition = "2s ease-in";
+        }
+        if(guess > secretNumber){
+            hint.textContent = "Hint: It's lower than inputed number"
+        }
+        if(guess < secretNumber){
+            hint.textContent = "Hint: It's higher than inputed number"
+        }
     
 })
 
@@ -36,5 +48,8 @@ reset.addEventListener("click", function(){
     displayMessage("Start guessing...")
     number.textContent = "?"
     functionBox.style.backgroundColor = "white"
+})
+next.addEventListener("click", function(){
+    location.reload();
 })
 
